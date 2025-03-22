@@ -1,6 +1,6 @@
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
 
-const isPublicRoute = createRouteMatcher(["/dashboard"])
+const isPublicRoute = createRouteMatcher(["/dashboard(.*)"])
 
 export default clerkMiddleware(async (auth, request) => {
   if(isPublicRoute(request)){
@@ -14,6 +14,8 @@ export const config = {
     // Always run for API routes
     '/(api|trpc)(.*)',
   ],
-}
+} 
+
+ 
 
  

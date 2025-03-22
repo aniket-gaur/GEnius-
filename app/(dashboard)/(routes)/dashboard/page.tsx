@@ -11,6 +11,10 @@ import Link from "next/link";
 export default async function Dashboard() {
   const user = await currentUser();
 
+  if (!user) {
+    <div>User is not signed IN</div>
+  }
+
   const tools = [{
     label: "Conversation",
     icon: MessageSquare,
@@ -62,7 +66,7 @@ export default async function Dashboard() {
 
           {tools.map((tool) => (
 
-            <Link href={tool.href}>
+            <Link key={tool.href} href={tool.href}>
               <Card key={tool.href}
 
 

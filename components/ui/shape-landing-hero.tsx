@@ -5,7 +5,7 @@ import { Circle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { Button } from "./button";
-import ScrollAnimation from "../about";
+
 
 
 function ElegantShape({
@@ -195,7 +195,7 @@ function HeroGeometric({
                         </p>
 
                         <div className="flex gap-7 justify-center">
-                            <Link href='/login'>
+                            <Link href='/sign-in'>
                                 <Button className="text-white bg-gray-600 hover:bg-gray-700">
                                     Login
                                 </Button>

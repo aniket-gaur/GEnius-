@@ -5,9 +5,9 @@ import "./globals.css";
 
 import {
   ClerkProvider,
-  
-  
-  
+
+
+
 } from '@clerk/nextjs'
 
 const geistSans = Geist({
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   title: "ASK-AI",
   description: "The Next Gen AI-Platform",
 };
- 
+
 
 export default function RootLayout({
   children,
@@ -33,13 +33,13 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider afterSignOutUrl="/">
-  <html lang="en">
-      <body>
-         
-        <main>{children}</main>
-      </body>
-    </html> 
+      <html lang="en">
+        <body>
+
+          <main>{children}</main>
+        </body>
+      </html>
     </ClerkProvider>
-  
+
   );
 }
